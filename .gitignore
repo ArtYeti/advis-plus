@@ -1,0 +1,7 @@
+node_modules/
+README.md
+/Дизайн
+.bowerrc
+block.js
+group-size.js
+package-lock.json

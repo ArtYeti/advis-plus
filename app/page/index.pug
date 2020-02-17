@@ -1,0 +1,17 @@
+extends layout/main.pug
+
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/index-services/index-services.pug
+include ../blocks/company-mission/company-mission.pug
+include ../blocks/partners/partners.pug
+include ../blocks/footer/footer.pug
+
+block title
+    +head('Проверка')        
+block pagecontent
+    +header()
+    +index-services
+    +company-mission
+    +partners
+    +footer
