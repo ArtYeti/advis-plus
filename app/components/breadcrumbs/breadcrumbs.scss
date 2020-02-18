@@ -1,0 +1,32 @@
+.breadcrumbs {
+    display: flex;
+    margin-bottom: 36px;
+    &--object {
+        margin-bottom: 60px;
+    }
+    &__item {
+        color: #ffffff;
+        padding-right: 18px;
+        &:after {
+            content: '/';
+            margin-left: 6px;
+        }
+        &:last-child {
+            &:after {
+                display: none;
+            }
+        }
+        &:first-child {
+            .breadcrumbs__link {
+                color: #55D2FF;
+            }
+        }
+        span {
+            font-size: 16px;
+        }
+    }
+    &__link {
+        color: #ffffff;
+        font-size: 16px;
+    }
+}

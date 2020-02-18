@@ -1,0 +1,30 @@
+extends layout/main.pug
+
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/index-services/index-services.pug
+include ../blocks/company-mission/company-mission.pug
+include ../blocks/partners/partners.pug
+include ../blocks/footer/footer.pug
+include ../blocks/services-slider/services-slider.pug
+
+
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+
+block title
+    +head('Cтроительно-монтажные работы')        
+block pagecontent
+    +header()
+    .header_services(style="background-image: url(images/header_services-3.jpg);")
+        .container-fluid
+            +breadcrumbs()
+                +breadcrumbs-item('Главная', 'index.html')
+                +breadcrumbs-item('Услуги', 'services.html') 
+                +breadcrumbs-item('Cтроительно-монтажные работы', '') 
+            h1 строительно-монтажные работы
+            p Мы накопили значительный опыт работы с применением современных технологий, в том числе на аварий-ных, обрушающихся и конструктивно сложных сооружениях, также и на действующих предприятиях химиче-ской промышленности, без остановки производственных процессов. При производстве работ по сносу мы предоставляем Заказчику комплекс услуг - от переработки отходов во вторичные стройматериалы, до выполне-ния работ нулевого цикла.
+    .list-services
+    +services-slider
+    +footer    

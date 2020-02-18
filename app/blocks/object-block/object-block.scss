@@ -1,0 +1,94 @@
+.object-block {
+    background-color: #2E2C2C;
+    height: 549px;
+    
+}
+.object-item {
+    height: 545px;
+    background-color: #ffffff;
+    top: -87px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    &__main {
+        width: 49%;
+        
+    }
+    &__content {
+        padding: 36px 41px;
+        p {
+            font-weight: 500;
+            font-size: 17px;
+            line-height: 26px;
+            color: #575757;
+        }
+    }
+    &__map {
+        width: 52%;
+        position: relative;
+        padding: 35px 0 0 ;
+        #map {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.object-slider {
+    position: relative;
+    img {
+        width: 100%;
+    }
+    .swiper-pagination {
+        text-align: left;
+        font-weight: 700;
+        display: inline-block;
+        width: auto;
+        padding-left: 22px;
+        bottom: 5px;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: rgba(255, 255, 255, 0.33);        
+    }
+}
+.map-search {
+    max-width: 543px;
+    height: 55px;
+    position: relative;
+    background: #FFFFFF;
+    border-radius: 56px;
+    z-index: 2;
+    margin: 0 auto;
+    display: flex;
+    padding: 0 19px;
+    align-items: center;
+    &__input {
+        background-image: url(../images/place.svg);
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+        padding-left: 28px;
+        font-weight: 500;
+        font-size: 16px;
+        color: #BAB7B7;
+        &::placeholder {
+            color: #BAB7B7;
+        }
+    }
+    &__button {
+        background-image: url(../images/next.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 20px;
+        margin-left: auto;
+        background-color: transparent;
+        border: 0;
+        outline: 0;
+    }
+}

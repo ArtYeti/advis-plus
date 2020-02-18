@@ -1,0 +1,67 @@
+.services-block {
+    padding: 85px 0 92px;
+}
+.services-content {
+    height: 450px;
+    background: linear-gradient(0deg, rgba(25, 25, 25, 0.27), rgba(25, 25, 25, 0.27)), url(../images/services-block.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-right: 10px;
+}
+.services-slider {
+    width: 591px;
+    height: 243px;
+    background: #FFFFFF;
+    border: 1px solid #D1D0D0;
+    font-size: 17px;
+    font-weight: 500;
+    position: relative;
+    &__slider {
+        overflow: hidden;
+    }
+    
+    &:after {
+        content: '1/13';
+        font-size: 250px;
+        color: rgba(0, 0, 0, 0.04);
+        position: absolute;
+        right: 24px;
+        top: 21px;
+        font-weight: 700;
+        line-height: 1;
+    }
+    .swiper-slide {
+        padding: 54px 50px;
+    }
+    &__button {
+        display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -23px;
+        z-index: 2;
+        & > div {
+            width: 47px;
+            height: 47px;
+            border-radius: 50%;
+            background-color: #FFFFFF;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+            outline: 0;
+            cursor: pointer;
+            margin-bottom: 10px;
+            background-image: url(../images/arrow.svg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 10px;
+        }
+        .services-block-button-next {
+            transform: rotate(180deg);
+        }
+        .object-slider-button-next {
+            transform: rotate(180deg);
+        }        
+    }
+}

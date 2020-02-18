@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
 body {
-    background: #E5E5E5;
+
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    color: #575757;
+    color: #191919;
+    line-height: 1.53;
 }
 .container-fluid {
     max-width: 1230px;
@@ -16,6 +17,20 @@ body {
     text-transform: uppercase;
     color: #A5A1A1;
     margin-bottom: 18px;
+}
+.i-title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #191919;
+    margin-bottom: 15px;    
+}
+.b-title {
+    font-size: 23px;
+    text-transform: uppercase;
+    color: #191919;
+    font-weight: 700;
 }
 .title {
     font-size: 35px;
@@ -47,4 +62,25 @@ body {
     background-repeat: no-repeat;
     padding-right: 44px;
     display: inline-block;
+}
+h1 ,
+.h1 {
+    font-weight: 700;
+    font-size: 40px;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+.sub-title {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    span {
+        font-size: 18px;
+        font-weight: 400;
+        display: block;
+        text-transform: none;
+    }
 }

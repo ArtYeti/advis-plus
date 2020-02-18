@@ -1,10 +1,16 @@
 @import '_mixins';
 @import '_defaults';
+@import '../components/breadcrumbs/breadcrumbs';
 @import '../blocks/header/header';
 @import '../blocks/index-services/index-services';
 @import '../blocks/company-mission/company-mission';
 @import '../blocks/partners/partners';
-@import '../blocks/footer/footer'
+@import '../blocks/header-services/header-services';
+@import '../blocks/services-slider/services-slider';
+@import '../blocks/object-block/object-block';
+@import '../blocks/reconstruction/reconstruction';
+@import '../blocks/licenses/licenses';
+@import '../blocks/footer/footer';
 
 
 

@@ -103,7 +103,7 @@ function scripts() {
 	return src([
 			'app/libs/jquery/dist/jquery.min.js' ,
 			'app/libs/bootstrap/dist/js/bootstrap.min.js',
-			'app/libs/swiper-5.2.0/package/js/swiper.min.js'
+			'app/libs/swiper-5.2.0/package/js/swiper.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(dest('app/js'));
@@ -132,6 +132,7 @@ function watchFiles() {
 	watch("app/page/**/*", pages);
 	watch("app/blocks/**/*.pug", pages);
 	watch("app/scss/**/*", scss);
+	watch("app/components/**/*", scss);
 	watch("app/blocks/**/*.scss", scss);
 	watch("app/js/*.js" );
 }

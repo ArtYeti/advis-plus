@@ -1,0 +1,74 @@
+.licenses-item {
+    width: 337px;
+    height: 493px;
+    position: relative;
+    transition: all 0.3s;
+    z-index: 5;
+    margin-bottom: 42px;
+    &:hover {
+        z-index: 6;
+
+    }
+    &:nth-child(3n) {
+        .licenses-item__content {
+            left: auto;
+            right: 0;
+        }
+    }
+    .licenses-item__content {
+        position: absolute;
+        width: 100%;
+        height: 423px;
+        border: 11px solid #C5CDCD;
+        box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.13);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        left: 0;
+        top: 0;
+        z-index: 3;
+        background-color: #ffffff;
+        &:hover { 
+            border-color: #009AD2;
+            width: 538px;
+            height: 675px; 
+            .loop {
+                background-color: #009AD2;
+            }
+        }
+        img {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        .loop {
+            position: absolute;
+            width: 57px;
+            height: 57px;
+            right: 0;
+            bottom: 0;
+            background-color: #C5CDCD;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(../images/loop.svg);
+            cursor: pointer;
+        }
+    }
+    .s-title {
+        z-index: 2;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 38px;
+        text-transform: none;
+        color: #191919;        
+    }
+}
+.licenses-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 70px 0 29px;
+}

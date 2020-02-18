@@ -1,0 +1,31 @@
+mixin object-block
+    .object-block
+        .container-fluid
+            .object-item
+                .object-item__main
+                    .object-item__content
+                        .i-title Ижорские заводы. ЗХР
+                        p Ижорские заводы — одно из старейших промышленных предприятий России, основанное в 1722 году по указу Петра Великого. За годы своей работы заводчане вписали в историю России немало примеров достойного служения Отечеству.
+                    .object-slider
+                        .swiper-container.object-slider_slider
+                            .swiper-wrapper
+                                .swiper-slide
+                                    img(src="images/object-slider.jpg", alt="")
+                                .swiper-slide
+                                    img(src="images/object-slider.jpg", alt="")
+                                .swiper-slide
+                                    img(src="images/object-slider.jpg", alt="")
+                                .swiper-slide
+                                    img(src="images/object-slider.jpg", alt="")
+                                .swiper-slide
+                                    img(src="images/object-slider.jpg", alt="")   
+                        .swiper-pagination                                                                                                                                             
+                        .services-slider__button
+                            .object-slider-button-next
+                            .object-slider-button-prev                    
+                .object-item__map
+                    form(action="/").map-search
+                        input(type="search", name="search" placeholder="Поиск региона").map-search__input
+                        button.map-search__button
+                    #map
+                        img(src="images/map.jpg", alt="")

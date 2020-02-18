@@ -1,0 +1,37 @@
+extends layout/main.pug
+
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/index-services/index-services.pug
+include ../blocks/company-mission/company-mission.pug
+include ../blocks/partners/partners.pug
+include ../blocks/footer/footer.pug
+include ../blocks/services-slider/services-slider.pug
+include ../blocks/object-block/object-block.pug
+include ../blocks/reconstruction/reconstruction.pug
+include ../blocks/licenses/licenses.pug
+
+
+
+include ../blocks/object-block/object-block.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+
+block title
+    +head('Благодарственные письма')        
+block pagecontent
+    +header()
+    .header_services(style="background-image: url(images/licenses_header.jpg);")
+        .container-fluid
+            +breadcrumbs('object')
+                +breadcrumbs-item('Главная', 'index.html')
+                +breadcrumbs-item('Услуги', 'services.html') 
+                +breadcrumbs-item('Cтроительно-монтажные работы', 'cmr.html') 
+                +breadcrumbs-item('Благодарственные письма', '') 
+            h1 Благодарственные письма
+            p Компания ООО «Триплюс-Инжиниринг» предоставляет полный инжиниринговых услуг в соответствии с разработанной внутри компании технологией деятельности, а также - сертифицированной в органах стандартизации. Для успешного управления проектами в нашей компании внедрен комплекс современных программных средств, в которых наши специалисты по управлению проектами строительства планируют свою работу монтажного производственно-технического отделов компании.
+    main
+        .container-fluid
+            +licenses
+    +footer
