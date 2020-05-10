@@ -1,0 +1,23 @@
+extends layout/main.pug
+
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/footer/footer.pug
+include ../blocks/contacts/contacts.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+block title
+    +head('Контакты')        
+block pagecontent
+    +header()
+    .header_services(style="background-image: url(images/header_services-8.jpg);")
+        .container-fluid
+            +breadcrumbs()
+                +breadcrumbs-item('Главная', 'index.html')
+                +breadcrumbs-item('Консалтинг', '') 
+            h1 Контакты
+    main
+        .container-fluid            
+            +contacts
+    +footer

@@ -6,8 +6,6 @@
     <meta name="viewport" content="width=device-width"/>
     <meta name="theme-color" content="#ffffff"/>
     <title>Благодарственные письма</title>
-    <script src="js/libs.min.js"></script>
-    <script src="js/script.js"></script>
     <link rel="stylesheet" href="style/libs.min.css"/>
     <link rel="stylesheet" href="style/main.css"/>
   </head>
@@ -19,13 +17,21 @@
           <div class="phone">Телефон: <a class="phone__link" href="tel:+78123333332">8(812)333-33-32 </a></div>
         </div>
         <div class="header__content"><a class="logo" href=""></a>
+          <div class="open-menu"><span></span><span></span><span></span></div>
           <div class="nav">
             <div class="nav__item">
               <div class="nav__contain"><a class="nav__link" href="">Главная</a></div>
             </div>
-            <div class="nav__item">
-              <div class="nav__contain"><a class="nav__link nav__link--dropdown" href="">Услуги</a>
-                <div class="nav__dropdown"></div>
+            <div class="nav__item" data-content="nav__dropdown">
+              <div class="nav__contain"><a class="nav__link" href="">
+                  Услуги<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 0.5L9.5 8L18 0.5" />
+</svg>                            </a>
+                <ul class="nav-submenu">
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">СМР</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Проектирование</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Демонтаж</a></li>
+                </ul>
               </div>
             </div>
             <div class="nav__item">
@@ -64,39 +70,27 @@
       <div class="container-fluid">
         <div class="licenses-list">
           <div class="licenses-item">
-            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/>
-              <div class="loop"></div>
-            </div>
+            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/><a class="loop" href="images/licenses.jpg" data-fancybox="gallery"></a></div>
             <div class="s-title">Благодарственное письмо</div>
           </div>
           <div class="licenses-item">
-            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/>
-              <div class="loop"></div>
-            </div>
+            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/><a class="loop" href="images/licenses.jpg" data-fancybox="gallery"></a></div>
             <div class="s-title">Благодарственное письмо</div>
           </div>
           <div class="licenses-item">
-            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/>
-              <div class="loop"></div>
-            </div>
+            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/><a class="loop" href="images/licenses.jpg" data-fancybox="gallery"></a></div>
             <div class="s-title">Благодарственное письмо</div>
           </div>
           <div class="licenses-item">
-            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/>
-              <div class="loop"></div>
-            </div>
+            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/><a class="loop" href="images/licenses.jpg" data-fancybox="gallery"></a></div>
             <div class="s-title">Благодарственное письмо</div>
           </div>
           <div class="licenses-item">
-            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/>
-              <div class="loop"></div>
-            </div>
+            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/><a class="loop" href="images/licenses.jpg" data-fancybox="gallery"></a></div>
             <div class="s-title">Благодарственное письмо</div>
           </div>
           <div class="licenses-item">
-            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/>
-              <div class="loop"></div>
-            </div>
+            <div class="licenses-item__content"><img src="images/licenses.jpg" alt=""/><a class="loop" href="images/licenses.jpg" data-fancybox="gallery"></a></div>
             <div class="s-title">Благодарственное письмо</div>
           </div>
         </div>
@@ -109,9 +103,16 @@
             <div class="nav__item">
               <div class="nav__contain"><a class="nav__link" href="">Главная</a></div>
             </div>
-            <div class="nav__item">
-              <div class="nav__contain"><a class="nav__link nav__link--dropdown" href="">Услуги</a>
-                <div class="nav__dropdown"></div>
+            <div class="nav__item" data-content="nav__dropdown">
+              <div class="nav__contain"><a class="nav__link nav__link--dropdown" href="">
+                  Услуги<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 0.5L9.5 8L18 0.5" />
+</svg></a>
+                <ul class="nav-submenu">
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">СМР</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Проектирование</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Демонтаж</a></li>
+                </ul>
               </div>
             </div>
             <div class="nav__item">
@@ -124,7 +125,7 @@
               <div class="nav__contain"><a class="nav__link" href="">Научная деятельность</a></div>
             </div>
             <div class="nav__item">
-              <div class="nav__contain"><a class="nav__link" href="">Контакты        </a></div>
+              <div class="nav__contain"><a class="nav__link" href="">Контакты      </a></div>
             </div>
           </div>
         </div>
@@ -134,5 +135,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

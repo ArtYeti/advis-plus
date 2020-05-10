@@ -1,7 +1,10 @@
 header {
     background-color: #191919;
-    height: 162px;
-    padding: 22px 0 0;
+    padding: 22px 0;
+    @include small {
+        height: auto;
+        padding: 20px 0;
+    }
 }
 .header {
     &__top-text {
@@ -11,6 +14,10 @@ header {
         border-bottom: 1px solid #FFFFFF;
         font-size: 16px;
         margin-bottom: 25px;
+        @include small {
+            flex-direction: column;
+            border: 0;
+        }
     }
  
     &__content {
@@ -28,6 +35,9 @@ header {
         position: absolute;
         left: -33px;
         top: 12px;
+        @include small {
+            display: none;
+        }
     }
     &__link {
         color: #FFFFFF;
@@ -38,37 +48,155 @@ header {
     width: 296px;
     height: 38px;
     background-image: url(../images/logo.svg);
-    background-size: cover;
+    background-size: 100%;
     background-position: center;
     background-repeat: no-repeat;
     display: block;
     margin-right: 40px;
     flex: 0 0  auto;
+    @include large {
+        width: 200px;
+        margin-right: 15px;
+        
+    }
 }
 .nav {
     width: calc(100% - 336px);
     flex: 0 0 auto;
     display: flex;
-    margin-top: 5px;
     justify-content: space-between;
+    background-color: #191919;
+    transition: transform 0.3s;
+
+    @include large {
+        max-width: 100%;
+        flex-basis: 0;
+        -ms-flex-positive: 1;
+        flex-grow: 1;
+    }
+    @include medium {
+        position: absolute;
+        flex-direction: column;
+        top: 160px;
+        width: 100%;
+        left: 0;
+        z-index: 5;
+        padding: 15px;
+        transform: translateX(-100%);
+        &--active {
+            transform: translateX(0)
+        }
+    }
+    &__item {
+        position: relative;
+        @include medium {
+            margin-bottom: 20px;
+        }
+        &:hover {
+            .nav-submenu {
+                display: block;
+            }
+            svg {
+                transform: rotate(180deg);
+                stroke: #55D2FF;
+            }
+        }
+    }
     &__link {
         font-size: 16px;
         font-weight: 600;
         color: #FFFFFF;
         text-decoration: none;
         text-transform: uppercase;
+        &:hover {
+            color: #55D2FF;
+            text-decoration: none;
+        }
+        svg {
+            margin-left: 15px;
+            transition: 0.3s;
+            stroke: #ffffff;
+        }
     }
     &__dropdown {
-        width: 17px;
-        height: 7.5px;
-        background-image: url(../images/dropdown.svg);
-        background-size: cover;
-        display: inline-block;
-        cursor: pointer;
-        margin-left: 15px;
+
+       
     }
     &__contain {
         display: flex;
         align-items: center;
+        flex-direction: column;
+    }
+}
+.nav-submenu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    z-index: 50;
+    background-color: #FFFFFF;
+    padding: 0;
+    list-style: none;
+    width: 194px;
+    left: 0;
+    margin: 5px 0 0;
+    @include medium {
+        position: static;
+        width: 100%;
+    }
+    &__link {
+        color: #313131;
+        font-size: 16px;
+        line-height: 2;
+        text-decoration: none;
+        padding: 5px 20px;
+        display: block;
+        &:hover {
+            background: rgba(85, 210, 255, 0.22);
+        }
+    }
+}
+.open-menu {
+    display: none;
+    position: relative;
+    margin-left: auto;
+    width: 50px;
+    height: 25px;
+    z-index: 15;
+    @include medium {
+        display: block;
+    }
+    span {
+        width: 100%;
+        height: 2px;
+        display: block;
+        background-color: #FFFFFF;
+        transition: 0.3s;
+        position: absolute;
+        &:nth-child(1) {
+           top: 0;
+        }
+        &:nth-child(2) {
+           top: 10px;
+        }
+        &:nth-child(3) {
+            top: 20px;
+         }                 
+    }
+}
+.open-menu-active {
+    .open-menu {
+        span {
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                top: 10px;
+            }
+            &:nth-child(2) {
+                opacity: 0;
+             }            
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                top: 10px;
+            }            
+        }
     }
 }

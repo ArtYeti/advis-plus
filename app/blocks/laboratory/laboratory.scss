@@ -1,0 +1,41 @@
+.laboratory {
+    margin-top: 67px;
+    padding-bottom: 33px;
+    img {
+        max-width: 100%;
+    }
+    &__main {
+        display: flex;
+        margin-bottom: 34px;
+        font-size: 17px;
+        @include small {
+            display: block;
+            margin-bottom: 0;
+        }
+        strong {
+            display: block;
+            margin-bottom: 20px;
+        }
+
+    }
+    &__right {
+        padding-left: 45px;
+        
+        font-size: 17px;
+        @include small {
+            padding: 15px 0;
+        }
+        .i-title {
+            margin-bottom: 33px;
+        }
+        p {
+            margin-bottom: 0;
+            &:not(:last-child) {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+.laboratory--padding {
+    padding-top: 15px;
+}

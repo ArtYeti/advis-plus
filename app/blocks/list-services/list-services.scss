@@ -1,0 +1,72 @@
+.service-item {
+    padding: 43px 43px 70px;
+    transition: 0.3s;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+    @include large {
+        padding: 43px 25px 70px;
+    }
+    @include medium {
+        max-width: 50%;
+        width: 100%;
+        flex: 0 0 auto;
+        padding: 25px;
+    }
+    @include small {
+        max-width: none;
+    }
+    &:hover {
+        box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.59);
+    }
+    &__img {
+        height: 290px;
+        @include medium {
+            height: 240px;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+    }
+    &_strong {
+        font-size: 18px;
+        line-height: 22px;
+        color: #ffffff;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: flex-end;
+        font-weight: 700;
+    }
+}
+.link {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 26px;
+    text-decoration-line: underline;
+    color: #009AD2;
+    position: relative;
+    &:hover {
+        text-decoration: none;
+    }
+    &:after {
+        content: '';
+        width: 31px;
+        height: 31px;
+        background-image: url(../images/lnk.svg);
+        position: absolute;
+        right: -50px;
+    }
+}
+.services-row {
+    display: flex;
+    @include medium {
+        flex-wrap: wrap;
+    }
+}

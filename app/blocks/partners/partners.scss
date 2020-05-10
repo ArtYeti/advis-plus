@@ -1,18 +1,21 @@
 .partners {
+    background-color: #F4F4F7;
+    padding-bottom: 43px;
+    padding-top: 80px;
+    margin-top: -68px;
+    @include medium {
+        margin-top: 0;
+    }
     .title {
         margin-bottom: 0;
         &:after {
             display: none;
         }
     }
-    margin-bottom: 43px;
+    
 }
 .partners-slider {
-    width: 1096px;
-    margin: 0 auto;
-    .swiper-slide{
-        max-width: 209px;
-    }
+    margin: 0 50px;
     &-container {
         position: relative;
     }
@@ -38,9 +41,16 @@
 .partners-button-prev ,
 .partners-button-next {
     cursor: pointer;
+    z-index: 5;
     outline: none;
     &:after {
         font-size: 30px;
         color: #D1D0D0;
+        transition: 0.3s;
+    }
+    &:hover {
+        &::after {
+            color: #55D2FF;
+        }
     }
 }

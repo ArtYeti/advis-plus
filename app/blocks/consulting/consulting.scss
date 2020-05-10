@@ -1,0 +1,74 @@
+.consulting {
+    padding-top: 67px;
+    display: flex;
+    margin-bottom: 39px;
+    @include medium {
+        flex-direction: column-reverse;
+    }
+    &__text {
+        margin-top: 12px;
+        font-size: 17px;
+        @include medium {
+            margin-bottom: 50px;
+        }        
+    }
+}
+.consulting-block {
+    padding-bottom: 9px;
+    p {
+        margin-bottom: 22px;
+        font-size: 17px;
+    }
+    strong {
+        margin-bottom: 17px;
+        display: block;
+    }
+}
+.company-mission__slider {
+    &--consulting {
+        margin-top: 0;
+        max-width: 410px;
+        height: 549px;
+        margin-right: 43px;  
+        @include small {
+            height: 350px;
+        }
+        .slider-paginator {
+            width: 124px;
+            height: 60px;
+        }
+    }
+}
+.c-title {
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+}
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li {
+        font-size: 17px;
+        line-height: 1.17;
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 21px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &:before {
+            content: '';
+            width: 11px;
+            height: 11px;
+            background: #009AD2;
+            position: absolute;
+            top: 4px;
+            left: 0;
+            border-radius: 50%;
+        }
+    }
+}

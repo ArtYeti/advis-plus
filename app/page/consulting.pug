@@ -1,0 +1,31 @@
+extends layout/main.pug
+
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/footer/footer.pug
+include ../blocks/articles/articles.pug
+include ../blocks/consulting/consulting.pug
+include ../blocks/faq/faq.pug
+include ../blocks/consulting-faces/consulting-faces.pug
+include ../blocks/com-list/com-list.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+block title
+    +head('Консалтинг')        
+block pagecontent
+    +header()
+    .header_services(style="background-image: url(images/header_services-7.jpg);")
+        .container-fluid
+            +breadcrumbs()
+                +breadcrumbs-item('Главная', 'index.html')
+                +breadcrumbs-item('Консалтинг', '') 
+            h1 Консалтинг
+            p 30 декабря 2020 г. компании ООО «Адвис Плюс» и ООО «АйЭм Консалтинг Групп» объявили о создании консорциума для реализации совместных проектов на рынке консалтинговых и инжиниринговых услуг.
+    main
+        .container-fluid
+            +consulting
+        +com-list
+        +consulting-faces
+        +faq
+    +footer

@@ -8,11 +8,25 @@ $(document).ready(function () {
         loop: true
     });
     var partnersSlider = new Swiper('.partners-slider', {
-        slidesPerView: 5,
-        spaceBetween: 13,
+        slidesPerView: 1,
+        spaceBetween: 0,
+        breakpoints: {
+            640: {
+              slidesPerView: 2,
+            },
+            768: {
+              slidesPerView: 3,
+            },
+            1024: {
+              slidesPerView: 4,
+            },
+            1200: {
+                slidesPerView: 4,
+            },            
+        },
         navigation: {
             nextEl: '.partners-button-next',
-            prevEl: '.partners-button-prev',
+            prevEl: '.partners-button-prev'
         },
         loop: true
     }); 
@@ -22,6 +36,10 @@ $(document).ready(function () {
             nextEl: '.services-block-button-next',
             prevEl: '.services-block-button-prev',
         },
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+          },
         loop: true
     });
     var objectSlider = new Swiper('.object-slider_slider', {
@@ -42,15 +60,42 @@ $(document).ready(function () {
             prevEl: '.reconstruction__slider-button-prev',
         },
         loop: true
-    });
-    
-
-    
+    });  
     
     $(".partners-button-next").on("click" , function() {
         partnersSlider.navigation.nextEl
-    })
-    	
+    });
+    
+    $(".tabs__link").on("click", function() {
+        var id = $(this).attr("data-tab")
+        console.log(id)
+        $(".tabs__link").removeClass("tabs__link--active");
+        $(this).addClass("tabs__link--active");
+        $(this).closest(".tabs").find(".tabs-content").removeClass("tabs-content--active");
+        $(this).closest(".tabs").find(".tabs-content#"+id+"").addClass("tabs-content--active");
+        $(".contacts__map").removeClass("contacts__map--active");
+        $(".contacts__map#"+id+"").addClass("contacts__map--active");
+    });
+    var maxHeight = 0;
+    $(".service-item_strong").each(function(){
+      if ( $(this).height() > maxHeight ) 
+      {
+        maxHeight = $(this).height();
+      }
+    });
+     
+    $(".service-item_strong").height(maxHeight);
+
+    $(".open-menu").on("click" , function() {
+        $("body").toggleClass("open-menu-active")
+        $("header .nav").toggleClass("nav--active")
+    });
+    if(innerWidth < 992) {
+        $("[data-content=nav__dropdown] .nav__link").on("click" , function(event) {
+            event.preventDefault()
+            $(this).closest(".nav__item").find(".nav-submenu").show()
+        })
+    }
 });
 
 $(document).mouseup(function(e) { 

@@ -1,4 +1,3 @@
-
 mixin header(link)
     header.header
         .container-fluid
@@ -8,14 +7,28 @@ mixin header(link)
                     a(href="tel:+78123333332").phone__link 8(812)333-33-32 
             .header__content
                 a(href="").logo
+                .open-menu
+                    span
+                    span
+                    span
                 .nav
                     .nav__item
                         .nav__contain
                             a(href="").nav__link Главная
-                    .nav__item
+                    .nav__item(data-content="nav__dropdown")
                         .nav__contain
-                            a(href="").nav__link.nav__link--dropdown Услуги
-                            .nav__dropdown
+                            a(href="").nav__link Услуги
+                                <svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 0.5L9.5 8L18 0.5" />
+                                </svg>                            
+                            ul.nav-submenu
+                                li.nav-submenu__item
+                                    a(href="").nav-submenu__link СМР
+                                li.nav-submenu__item
+                                    a(href="").nav-submenu__link Проектирование
+                                li.nav-submenu__item
+                                    a(href="").nav-submenu__link Демонтаж
+
                     .nav__item
                         .nav__contain
                             a(href="").nav__link Консалтинг

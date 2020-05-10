@@ -1,0 +1,67 @@
+.faq {
+    background-color: #F6F6F6;
+    padding: 96px 0px;
+    @include small {
+        padding: 35px 0;
+    }
+    .i-title {
+        margin-bottom: 35px;
+    }
+}
+.card {
+    background: #FFFFFF;
+    border: 1px solid #C5CDCD !important;
+    border-radius: 0;
+    margin-bottom: 13px;
+    &-header {
+        background-color: transparent;
+        border: 0;
+        font-size: 17px;
+        padding: 32px 90px 30px 37px;
+        position: relative;
+        @include small {
+            padding: 15px 80px 15px 15px;
+        }
+        &.collapsed {
+            .arrow-col {
+                border-color: #C5CDCD;
+                svg {
+                    transform: rotate(0);
+                    path {
+                        stroke: #C5CDCD;
+                    }
+                }
+            }
+        }
+    }
+    .arrow-col {
+        height: 53px;
+        width: 84px;
+        border-left: 1px solid #009AD2;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include small {
+            width: 70px;
+        }
+        svg {
+            cursor: pointer;
+            transform: rotate(180deg);
+            transition: 0.3s;
+            path {
+                stroke: #009AD2;
+            }
+
+        }
+    }
+}
+.card-body {
+    padding: 0 37px 30px;
+    @include small {
+        padding: 0 15px 30px;
+    }
+}

@@ -1,0 +1,102 @@
+.articles-list {
+    padding-top: 54px;
+    margin-bottom: 44px;
+}
+.articles {
+    display: flex;
+    font-family: 'Avenir Next Cyr' , sans-serif;
+    border-bottom: 1px solid #D1D0D0;
+    padding-bottom: 18px;
+    margin-bottom: 26px;
+    @include medium {
+        flex-direction: column;
+    }
+    &__images {
+        width: 412px;
+        height: 229px;
+        flex: 0 0 auto;
+        img {
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__content {
+        margin-left: 30px;
+        padding: 19px 101px 19px 0px;
+        @include medium {
+            margin-left: 0;
+            padding: 15px 15px 15px 0;
+        }
+    }
+    &__title {
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: 700;
+        
+        color: #000000;
+        position: relative;
+        margin-bottom: 15px;
+        display: inline-block;
+        span {
+            text-decoration: underline;
+        }
+        &:after {
+            content: '→';
+            margin-left: 10px;
+            position: relative;
+            top: -2px;
+            font-size: 15px;
+        }
+        &:hover {
+            color: #55D2FF;
+            text-decoration: none;
+        }
+    }
+}
+.date {
+    font-weight: 400;
+    color: #9BA5BB;
+    font-size: 16px;
+    margin-bottom: 18px;
+}
+.articles__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.375;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    &__link {
+        font-family: 'Avenir Next Cyr' , sans-serif;
+        margin: 0 8px;
+        color: #000000;
+        font-size: 25px;
+        text-decoration: none;
+        font-weight: bold;
+        text-align: center;
+        &:hover {
+            text-decoration: none;
+            color: #55D2FF;
+        }
+    }
+    &__arrow {
+        width: 40px;
+        height: 34px;
+        background: #FFFFFF;
+        border: 1px solid #BAB7B7;
+        background-image: url(../images/padination.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        &--prev {
+            margin-right: 25px;
+        }
+        &--next {
+            transform: scale(-1, 1);
+            margin-left: 25px;
+            margin-right: 0;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.contacts {
+
+    background-color: #ffffff;
+    margin-top: -87px;
+    position: relative;
+    display: flex;
+    &__info {
+        padding: 36px 40px;
+        @include small {
+            padding: 15px;
+        }
+        .i-title {
+            margin-bottom: 29px;
+        }
+    }
+}
+.tabs__head {
+    display: inline-flex;
+    margin-bottom: 0px;
+    border-bottom: 2px solid #C4C4C4;
+    @include small {
+        display: block;
+    }
+}
+.tabs {
+    &__link {
+        font-size: 20px;
+        font-weight: 700;
+        cursor: pointer;
+        color: #BAB7B7;
+        padding-bottom: 6px;
+        text-transform: uppercase;
+        position: relative;
+        @include small {
+            font-size: 15px;
+        }
+        &--active {
+            color: #009AD2;
+            &:after {
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: #009AD2;
+                position: absolute;
+                left: 0;
+                bottom: -2px;
+                @include small {
+                    display: none;
+                }
+            }
+        }
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}
+.tabs-content {
+    display: none;
+    &--active {
+        display: block;
+    }
+}
+.contacts__item {
+    font-family: 'Avenir Next Cyr';
+    color: #191919;
+    font-size: 18px;
+    margin-bottom: 30px;
+    @include large {
+        font-size: 16px;
+    }
+    strong {
+        font-weight: 700;
+        display: block;
+        margin-bottom: 5px;
+    }
+    span {
+        img {
+            margin-right: 10px;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: #191919;
+        img {
+            margin-right: 10px;
+        }        
+    }
+}
+.contacts__main {
+    
+    margin: 0 -40px 20px;
+    padding: 25px 20px 0 40px;
+    @include small {
+        margin: 0;
+        padding: 15px 0 0;
+    }
+    &:not(:last-child) {
+        border-bottom: 1px solid #C5CDCD;
+    }
+}
+.d-title {
+    color: #191919;
+    font-weight: 700;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+.contacts__map {
+    display: none;
+    img {
+        max-width: 100%;
+    }
+    &--active {
+        display: block;
+    }
+}

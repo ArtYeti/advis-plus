@@ -1,5 +1,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=cyrillic');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap');
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: url('../fonts/avenirnextcyr-bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Avenir Next Cyr';
+    src: url('../fonts/avenirnextcyr-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
 body {
 
     font-family: 'Montserrat', sans-serif;
@@ -24,7 +36,10 @@ body {
     line-height: 1;
     text-transform: uppercase;
     color: #191919;
-    margin-bottom: 15px;    
+    margin-bottom: 15px;  
+    @include small {
+        font-size: 19px;
+    }  
 }
 .b-title {
     font-size: 23px;
@@ -62,6 +77,9 @@ body {
     background-repeat: no-repeat;
     padding-right: 44px;
     display: inline-block;
+    &:hover {
+        color: #55D2FF;
+    }
 }
 h1 ,
 .h1 {
@@ -70,6 +88,9 @@ h1 ,
     color: #ffffff;
     text-transform: uppercase;
     margin-bottom: 22px;
+    @include small {
+        font-size: 25px;
+    }
 }
 .sub-title {
     font-weight: 700;
@@ -82,5 +103,14 @@ h1 ,
         font-weight: 400;
         display: block;
         text-transform: none;
+    }
+}
+main {
+    margin-bottom: 87px;
+    &.laboratory-main {
+        margin-bottom: 0;
+    }
+    @include medium {
+        margin-bottom: 0;
     }
 }

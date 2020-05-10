@@ -1,0 +1,104 @@
+mixin contacts
+    .contacts
+        .row
+            .col-lg-6
+                .contacts__info
+                    .i-title Офис в городе:
+                    .tabs
+                        .tabs__head
+                            .tabs__link.tabs__link--active(data-tab="tabs-1") Санкт-Петербург
+                            .tabs__link(data-tab="tabs-2") Братск
+                        .tabs__body
+                            .tabs-content.tabs-content--active#tabs-1
+                                .contacts__main
+                                    .contacts__item
+                                        strong Адрес:
+                                        span 
+                                            img(src="images/map.svg", alt="")
+                                            | наб. Обводного канала, 136, корп. 1Б, Санкт-Петербург
+                                    .row
+                                        .col-lg-5
+                                            .contacts__item
+                                                strong Email:
+                                                a(href="mailto:Info@advisplus.ru") 
+                                                    img(src="images/map.svg", alt="")
+                                                    | Info@advisplus.ru
+                                        .col-lg-7
+                                            .contacts__item
+                                                strong Телефон:
+                                                a(href="tel:88123333332") 
+                                                    img(src="images/map.svg", alt="")
+                                                    | 8(812)333-33-32
+                                .contacts__main
+                                    .d-title Реквизиты:
+                                    .row
+                                        .col-lg-5
+                                            .contacts__item
+                                                strong ИНН:
+                                                span  7841481489     
+                                            .contacts__item
+                                                strong КПП:
+                                                span  783901001   
+                                        .col-lg-7
+                                            .contacts__item
+                                                strong Полное название организации:
+                                                span  Общество с ограниченной ответственностью «ПРОЕКТНО-СТРОИТЕЛЬНАЯ КОМПАНИЯ «АДВИС ПЛЮС»
+                                .contacts__main
+                                    .row
+                                        .col-lg-5
+                                            .contacts__item
+                                                strong Адрес юридический
+                                                span  190020, Санкт-Петербург, наб. Обводного канала д. 136 корп. 1 лит Б Пом., Комн. 86, 202
+                                        .col-lg-7
+                                            .contacts__item
+                                                strong Адрес почтовый
+                                                span 190020, Санкт-Петербург, наб. Обводного канала д. 136 корп. 1 лит Б Пом., Комн. 86, 202
+                            .tabs-content#tabs-2
+                                .contacts__main
+                                    .contacts__item
+                                        strong Адрес:
+                                        span 
+                                            img(src="images/map.svg", alt="")
+                                            | наб. Обводного канала, 136, корп. 1Б, Санкт-Петербург
+                                    .row
+                                        .col-lg-5
+                                            .contacts__item
+                                                strong Email:
+                                                a(href="mailto:Info@advisplus.ru") 
+                                                    img(src="images/map.svg", alt="")
+                                                    | Info@advisplus.ru
+                                        .col-lg-7
+                                            .contacts__item
+                                                strong Телефон:
+                                                a(href="tel:88123333332") 
+                                                    img(src="images/map.svg", alt="")
+                                                    | 8(812)333-33-32
+                                .contacts__main
+                                    .d-title Реквизиты:
+                                    .row
+                                        .col-lg-5
+                                            .contacts__item
+                                                strong ИНН:
+                                                span  7841481489     
+                                            .contacts__item
+                                                strong КПП:
+                                                span  783901001   
+                                        .col-lg-7
+                                            .contacts__item
+                                                strong Полное название организации:
+                                                span  Общество с ограниченной ответственностью «ПРОЕКТНО-СТРОИТЕЛЬНАЯ КОМПАНИЯ «АДВИС ПЛЮС»
+                                .contacts__main
+                                    .row
+                                        .col-lg-5
+                                            .contacts__item
+                                                strong Адрес юридический
+                                                span  190020, Санкт-Петербург, наб. Обводного канала д. 136 корп. 1 лит Б Пом., Комн. 86, 202
+                                        .col-lg-7
+                                            .contacts__item
+                                                strong Адрес почтовый
+                                                span 190020, Санкт-Петербург, наб. Обводного канала д. 136 корп. 1 лит Б Пом., Комн. 86, 202                                        
+            .col-lg-6.d-none.d-lg-block
+                .contacts__map.contacts__map--active#tabs-1
+                    img(src="images/map.jpg", alt="")
+                .contacts__map#tabs-2
+                    img(src="images/map.jpg", alt="")

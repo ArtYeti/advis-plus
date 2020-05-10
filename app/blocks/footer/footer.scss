@@ -1,17 +1,28 @@
 
 .footer {
     background-color: #000000;
-    padding: 37px 0 23px;
+    padding: 37px 0 25px;
     &__content {
         padding: 0 0 25px;
         display: flex;
         border-bottom: 1px solid #ffffff;
         margin-bottom: 22px;
+        .nav {
+            background-color: transparent;
+        }
+        .nav-submenu {
+            bottom: 0;
+            top: auto;
+            margin-bottom: 35px;
+        }
     }
     &-text {
         display: flex;
         color: #ffffff;
         font-size: 16px;
         justify-content: space-between;
+        @include small {
+            flex-direction: column;
+        }
     }
 }

@@ -1,6 +1,7 @@
 .breadcrumbs {
     display: flex;
     margin-bottom: 36px;
+    flex-wrap: wrap;
     &--object {
         margin-bottom: 60px;
     }
@@ -28,5 +29,9 @@
     &__link {
         color: #ffffff;
         font-size: 16px;
+        &:hover {
+            color: #55D2FF;
+            text-decoration: none;
+        }
     }
 }

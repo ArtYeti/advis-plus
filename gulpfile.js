@@ -77,8 +77,9 @@ function scss() {
 function css_libs() {
 	parallel('scss');
 	return src([
-		'app/libs/bootstrap/dist/css/bootstrap.css',
-		'app/libs/swiper-5.2.0/package/css/swiper.css'		
+		'node_modules/bootstrap/dist/css/bootstrap.css',
+		'app/libs/swiper-5.2.0/package/css/swiper.css'	,
+		'app/libs/fancybox/dist/jquery.fancybox.min.css'	
 	])
 	.pipe(concat('libs.min.css'))
 	.pipe(cssnano())
@@ -101,9 +102,10 @@ function scripts_build() {
 
 function scripts() {
 	return src([
-			'app/libs/jquery/dist/jquery.min.js' ,
-			'app/libs/bootstrap/dist/js/bootstrap.min.js',
-			'app/libs/swiper-5.2.0/package/js/swiper.js'
+			'app/libs/jquery.min.js' ,
+			'node_modules/bootstrap/dist/js/bootstrap.min.js',
+			'app/libs/swiper-5.2.0/package/js/swiper.min.js',
+			'app/libs/fancybox/dist/jquery.fancybox.min.js'
 		])
 		.pipe(concat('libs.min.js'))
 		.pipe(dest('app/js'));

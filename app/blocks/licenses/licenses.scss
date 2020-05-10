@@ -1,17 +1,25 @@
 .licenses-item {
-    width: 337px;
+    width: 30%;
     height: 493px;
     position: relative;
     transition: all 0.3s;
     z-index: 5;
     margin-bottom: 42px;
+    @include medium {
+        width: 49%;
+    }
+    @include small {
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto 25px;
+    }
     &:hover {
         z-index: 6;
 
     }
     &:nth-child(3n) {
         .licenses-item__content {
-            left: auto;
+            left: auto; 
             right: 0;
         }
     }
@@ -31,8 +39,6 @@
         background-color: #ffffff;
         &:hover { 
             border-color: #009AD2;
-            width: 538px;
-            height: 675px; 
             .loop {
                 background-color: #009AD2;
             }
@@ -70,5 +76,5 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 70px 0 29px;
+    padding: 70px 0 0;
 }

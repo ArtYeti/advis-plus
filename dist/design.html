@@ -5,9 +5,7 @@
     <meta name="msapplication-TileColor" content="#da532c"/>
     <meta name="viewport" content="width=device-width"/>
     <meta name="theme-color" content="#ffffff"/>
-    <title>Серсивы</title>
-    <script src="js/libs.min.js"></script>
-    <script src="js/script.js"></script>
+    <title>Проектирование</title>
     <link rel="stylesheet" href="style/libs.min.css"/>
     <link rel="stylesheet" href="style/main.css"/>
   </head>
@@ -19,13 +17,21 @@
           <div class="phone">Телефон: <a class="phone__link" href="tel:+78123333332">8(812)333-33-32 </a></div>
         </div>
         <div class="header__content"><a class="logo" href=""></a>
+          <div class="open-menu"><span></span><span></span><span></span></div>
           <div class="nav">
             <div class="nav__item">
               <div class="nav__contain"><a class="nav__link" href="">Главная</a></div>
             </div>
-            <div class="nav__item">
-              <div class="nav__contain"><a class="nav__link nav__link--dropdown" href="">Услуги</a>
-                <div class="nav__dropdown"></div>
+            <div class="nav__item" data-content="nav__dropdown">
+              <div class="nav__contain"><a class="nav__link" href="">
+                  Услуги<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 0.5L9.5 8L18 0.5" />
+</svg>                            </a>
+                <ul class="nav-submenu">
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">СМР</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Проектирование</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Демонтаж</a></li>
+                </ul>
               </div>
             </div>
             <div class="nav__item">
@@ -58,8 +64,29 @@
         <p>Мы накопили значительный опыт работы с применением современных технологий, в том числе на аварий-ных, обрушающихся и конструктивно сложных сооружениях, также и на действующих предприятиях химиче-ской промышленности, без остановки производственных процессов. При производстве работ по сносу мы предоставляем Заказчику комплекс услуг - от переработки отходов во вторичные стройматериалы, до выполне-ния работ нулевого цикла.</p>
       </div>
     </div>
-    <div class="list-services"></div>
-    <section class="services-block"> 
+    <div class="list-services">
+      <div class="container-fluid">
+        <div class="services-row">
+          <div class="service-item">
+            <div class="service-item__img"><img src="images/services/str-1.png" alt=""></div>
+            <div class="service-item_strong">Объекты гражданского назначения</div><a class="link" href="">Подробнее</a>
+          </div>
+          <div class="service-item">
+            <div class="service-item__img"><img src="images/services/str-2.png" alt=""></div>
+            <div class="service-item_strong">Объекты производственного назначения</div><a class="link" href="">Подробнее</a>
+          </div>
+          <div class="service-item">
+            <div class="service-item__img"><img src="images/services/str-3.png" alt=""></div>
+            <div class="service-item_strong">Лицензии</div><a class="link" href="">Подробнее</a>
+          </div>
+          <div class="service-item">
+            <div class="service-item__img"><img src="images/services/str-3.png" alt=""></div>
+            <div class="service-item_strong">Благодарственные письма</div><a class="link" href="">Подробнее                    </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="services-block-sl"> 
       <div class="container-fluid">
         <h2 class="sub-title">Мы предлагаем для своих клиентов следующие услуги, <span>включающие в себя полный цикл работ, предшествующих новому строительству:</span></h2>
         <div class="services-content">
@@ -69,12 +96,22 @@
                 <div class="swiper-slide">
                   <p>Полный и частичный демонтаж зданий и сооружений любой сложности, в том числе промышлен-ных объектов, включая выполнение работ без прерывания производственного цикла действующих предприя-тий;</p>
                 </div>
+                <div class="swiper-slide">
+                  <p>Полный и частичный демонтаж зданий и сооружений любой сложности, в том числе промышлен-ных объектов, включая выполнение работ без прерывания производственного цикла действующих предприя-тий;</p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Полный и частичный демонтаж зданий и сооружений любой сложности, в том числе промышлен-ных объектов, включая выполнение работ без прерывания производственного цикла действующих предприя-тий;</p>
+                </div>
+                <div class="swiper-slide">
+                  <p>Полный и частичный демонтаж зданий и сооружений любой сложности, в том числе промышлен-ных объектов, включая выполнение работ без прерывания производственного цикла действующих предприя-тий;                                                                                                </p>
+                </div>
               </div>
             </div>
             <div class="services-slider__button">
               <div class="services-block-button-next"></div>
               <div class="services-block-button-prev"></div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </div>
@@ -86,9 +123,16 @@
             <div class="nav__item">
               <div class="nav__contain"><a class="nav__link" href="">Главная</a></div>
             </div>
-            <div class="nav__item">
-              <div class="nav__contain"><a class="nav__link nav__link--dropdown" href="">Услуги</a>
-                <div class="nav__dropdown"></div>
+            <div class="nav__item" data-content="nav__dropdown">
+              <div class="nav__contain"><a class="nav__link nav__link--dropdown" href="">
+                  Услуги<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 0.5L9.5 8L18 0.5" />
+</svg></a>
+                <ul class="nav-submenu">
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">СМР</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Проектирование</a></li>
+                  <li class="nav-submenu__item"><a class="nav-submenu__link" href="">Демонтаж</a></li>
+                </ul>
               </div>
             </div>
             <div class="nav__item">
@@ -101,7 +145,7 @@
               <div class="nav__contain"><a class="nav__link" href="">Научная деятельность</a></div>
             </div>
             <div class="nav__item">
-              <div class="nav__contain"><a class="nav__link" href="">Контакты        </a></div>
+              <div class="nav__contain"><a class="nav__link" href="">Контакты      </a></div>
             </div>
           </div>
         </div>
@@ -111,5 +155,7 @@
         </div>
       </div>
     </footer>
+    <script src="js/libs.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>

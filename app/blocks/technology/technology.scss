@@ -1,0 +1,50 @@
+.technology {
+    background: #F6F6F6;
+    padding-top: 68px;
+    padding-bottom: 50px;
+    .i-title  {
+        margin-bottom: 37px;
+    }
+}
+.technology-list {
+    display: flex;
+    flex-wrap: wrap;
+    counter-reset: list 0;
+}
+.technology-item {
+    position: relative;
+    width: 300px;
+    flex-basis: 1;
+    min-height: 145px;    
+    background: #FFFFFF;
+    border: 1px solid #D1D0D0;
+    padding: 5px 25px;
+    font-size: 17px;
+    color: #000000;
+    line-height: 1.17;
+    display: flex;
+    align-items: center;
+    @include medium {
+        width: 50%;
+    }
+    @include small {
+        width: 100%;
+    }
+    span {
+        position: relative;
+        z-index: 2;
+    }
+    &:after {
+        content: counter(list) ;
+        counter-increment: list;
+        font-size: 144px;
+        line-height: 0.73;
+        text-transform: uppercase;        
+        color: #F7F7F7;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        font-weight: 700;
+        z-index: 0;
+    }
+}

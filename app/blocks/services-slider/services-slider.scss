@@ -1,5 +1,8 @@
-.services-block {
+.services-block-sl {
     padding: 85px 0 92px;
+    @include small {
+        padding: 25px 0;
+    }
 }
 .services-content {
     height: 450px;
@@ -8,21 +11,27 @@
     background-position: center;
     background-size: cover;
     margin-right: 10px;
+    @include small {
+        height: auto;
+    }
 }
 .services-slider {
-    width: 591px;
+    max-width: 591px;
+    width: 100%;
     height: 243px;
     background: #FFFFFF;
     border: 1px solid #D1D0D0;
     font-size: 17px;
     font-weight: 500;
     position: relative;
+    @include small {
+        height: auto;
+    }
     &__slider {
         overflow: hidden;
+        z-index: 5;
     }
-    
-    &:after {
-        content: '1/13';
+    .swiper-pagination {
         font-size: 250px;
         color: rgba(0, 0, 0, 0.04);
         position: absolute;
@@ -30,9 +39,16 @@
         top: 21px;
         font-weight: 700;
         line-height: 1;
+        z-index: 3;
+        @include small {
+            display: none;
+        }
     }
     .swiper-slide {
         padding: 54px 50px;
+        @include small {
+            padding: 25px 25px 50px;
+        }
     }
     &__button {
         display: flex;
@@ -43,6 +59,16 @@
         transform: translateY(-50%);
         right: -23px;
         z-index: 2;
+        @include small {
+            top: auto;
+            transform: translateY(0);
+            bottom: 0;
+            flex-direction: row-reverse;
+            right: 0;
+            width: 100%;
+            justify-content: space-around;
+            z-index: 10;
+        }
         & > div {
             width: 47px;
             height: 47px;

@@ -1,57 +1,78 @@
-.company-mission{
+.company-mission {
     background-color: #ffffff;
-    height: 650px;
     padding-top: 87px;
-    margin-bottom: 80px;
+    @include medium {
+        margin-bottom: 50px;
+    }
     &__text {
         max-width: 572px;
         font-size: 17px;
         line-height: 26px;
+        margin-bottom: 50px;
         p {
             margin-bottom: 27px;
         }
     }
     &__slider {
-        width: 533px;
+        max-width: 533px;
+        width: 100%;
         height: 606px;
         margin-top: 24px;
         position: relative;
+        flex: 0 0 auto;
+        @include medium {
+            margin: 0 auto;
+        }
+        @include small {
+            height: 350px;
+        }
         .item {
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            width: 533px;
-            height: 606px;            
+            width: 100%;
+            height: 100%;           
         }
+        .slider-paginator {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 160px;
+            height: 68px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            display: flex;
+            padding: 0;
+        }
+        .swiper-button-next, 
+        .swiper-button-prev {
+            width: 50%;
+            text-align: center;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition:  0.3s;
+            &:hover {
+                background-color: #55D2FF;
+                &:after {
+                    color: #ffffff;
+                }
+            }
+        }
+        .swiper-button-next:after, .swiper-button-prev:after {
+            font-size: 26px;
+        }        
     }
     &-block {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
+        @include medium {
+            flex-direction: column;
+        }
     }
-    .slider-paginator {
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 160px;
-        height: 68px;
-        background: #FFFFFF;
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-        z-index: 2;
-        display: flex;
-        padding: 0;
-    }
-    .swiper-button-next, 
-    .swiper-button-prev {
-        width: 80px;
-        text-align: center;
-        height: 68px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
 
-    }
-    .swiper-button-next:after, .swiper-button-prev:after {
-        font-size: 26px;
-    }
 }
