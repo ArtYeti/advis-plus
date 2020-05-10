@@ -364,9 +364,30 @@ header {
     position: relative;
     width: 33.33333333%;
     height: 584px;
+    text-align: center;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+
+.service:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    transition: .3s;
+    background: transparent;
+}
+
+.service:hover:after {
+    background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #03435a 100%);
+}
+
+.service:hover .link {
+    visibility: visible;
+    opacity: 1;
 }
 
 .service::before {
@@ -389,6 +410,15 @@ header {
     height: 100%;
     padding: 22px 40px 100px;
     -ms-flex-direction: column;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.service__content .link {
+    visibility: hidden;
+    margin: 0 auto;
+    transition: .3s;
+    opacity: 0;
 }
 
 .service__number {
@@ -419,6 +449,8 @@ header {
     font-size: 30px;
     font-weight: 700;
     line-height: 37px;
+    width: 100%;
+    margin-bottom: 30px;
     text-align: center;
     text-transform: uppercase;
     color: #fff;
@@ -1724,6 +1756,7 @@ header {
     font-weight: 500;
     line-height: 26px;
     position: relative;
+    display: inline-block;
     color: #009ad2;
     -webkit-text-decoration-line: underline;
     text-decoration-line: underline;

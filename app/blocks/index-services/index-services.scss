@@ -13,6 +13,26 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    text-align: center;
+    &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        top: 0;
+        left: 0;
+        background: transparent;
+    }
+    &:hover {
+        &:after {
+            background: linear-gradient(180deg, rgba(25, 25, 25, 0) 0%, #03435A 100%);
+        }
+        .link {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
     @include small {
         width: 100%;
         height: 250px;
@@ -32,6 +52,7 @@
         z-index: 2;
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         height: 100%;
         padding: 22px 40px 100px;
         @include medium {
@@ -39,6 +60,12 @@
         }
         @include small {
             padding: 25px;
+        }
+        .link {
+            margin: 0 auto;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
         }
     }
     &__number {
@@ -63,12 +90,14 @@
     }
     &__desc {
         flex: 0 0 auto;
+        width: 100%;
         font-size: 30px;
         line-height: 37px;
         text-align: center;
         text-transform: uppercase;
         color: #ffffff;
         font-weight: 700;
+        margin-bottom: 30px;
         @include medium {
             font-size: 20px;
         }
