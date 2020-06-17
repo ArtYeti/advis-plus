@@ -1,0 +1,105 @@
+extends layout/main.pug
+
+include ../blocks/head/head.pug
+include ../blocks/header/header.pug
+include ../blocks/footer/footer.pug
+include ../components/breadcrumbs/breadcrumbs.pug
+
+
+
+block title
+    +head('Запись № 1')        
+block pagecontent
+    +header()
+    .header_services(style="background-image: url(images/header_services-10.jpg);")
+        .container-fluid
+            +breadcrumbs('object')
+                +breadcrumbs-item('Главная', 'index.html')
+                +breadcrumbs-item('Научная деятельность', 'scientific_activity.html') 
+                +breadcrumbs-item('Запись № 1', '') 
+            h1 Запись № 1
+    main.page--main
+        .articles-list
+            .container-fluid
+                .row
+                    .col-lg-5.mb-5
+                        img(src="images/rec1.jpg", alt="").img-response
+                    .col-lg-7 
+                        h2.page-title Снижение вреда окружающей среде при внедрении НСТ
+                        p Статья д.т.н. Кряжева А.М. в журнале «экология производства» Кфевраль 2011 о снижении воздействия на окружающую среду
+                        p 
+                            strong Авторы: 
+                            | Кряжев А.М. д.т.н., Белов Е.Г. ООО «Адвис плюс»<br>
+                            strong Первоисточник: 
+                            a(href="https://www.figma.com" target="_blank").pages-link https://www.figma.com
+                        .socials
+                            span Поделиться в соц.сетях:
+                            .socials-list
+                                a(href="").socials__item
+                                    img(src="images/social/google.svg", alt="")
+                                a(href="").socials__item
+                                    img(src="images/social/facebook.svg", alt="")
+                                a(href="").socials__item
+                                    img(src="images/social/vk.svg", alt="")
+                        .btn Прочитать статью
+        .page-articles
+            .container-fluid
+                .i-title Последние статьи:
+                .reconstruction-block.row
+                    .col-md-6.offset-md-3.col-lg-4.offset-lg-0
+                        .reconstruction-item.reconstruction-item--page
+                            .reconstruction-item__main
+                                .reconstruction-item__content
+                                    strong Запись № 2
+                                .reconstruction__slider.swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            img(src="images/rec1.jpg", alt="")
+                                    .reconstruction__button      
+                                        .reconstruction__slider-button-prev
+                                            <svg  viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5 1L1.5 14L14.5 25.5" stroke="#fff" stroke-width="2"/>
+                                            </svg>  
+                                        .reconstruction__slider-button-next
+                                            <svg  viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5 1L1.5 14L14.5 25.5" stroke="#fff" stroke-width="2"/>
+                                            </svg>                                                                          
+                    .col-md-6.offset-md-3.col-lg-4.offset-lg-0
+                        .reconstruction-item.reconstruction-item--page
+                            .reconstruction-item__main
+                                .reconstruction-item__content
+                                    strong Запись № 2
+                                .reconstruction__slider.swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            img(src="images/rec1.jpg", alt="")
+                                    .reconstruction__button
+                                        .reconstruction__slider-button-prev
+                                            <svg  viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5 1L1.5 14L14.5 25.5" stroke="#fff" stroke-width="2"/>
+                                            </svg>  
+                                        .reconstruction__slider-button-next
+                                            <svg  viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5 1L1.5 14L14.5 25.5" stroke="#fff" stroke-width="2"/>
+                                            </svg>        
+                    .col-md-6.offset-md-3.col-lg-4.offset-lg-0
+                        .reconstruction-item.reconstruction-item--page
+                            .reconstruction-item__main
+                                .reconstruction-item__content
+                                    strong Запись № 2
+                                .reconstruction__slider.swiper-container
+                                    .swiper-wrapper
+                                        .swiper-slide
+                                            img(src="images/rec1.jpg", alt="")
+                                    .reconstruction__button
+                                        .reconstruction__slider-button-prev
+                                            <svg  viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5 1L1.5 14L14.5 25.5" stroke="#fff" stroke-width="2"/>
+                                            </svg>  
+                                        .reconstruction__slider-button-next
+                                            <svg  viewBox="0 0 16 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M14.5 1L1.5 14L14.5 25.5" stroke="#fff" stroke-width="2"/>
+                                            </svg>                
+            a(href="").see-more Смотреть ещё
+
+    +footer

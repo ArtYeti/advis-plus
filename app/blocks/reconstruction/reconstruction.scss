@@ -38,6 +38,23 @@
             height: 451px;
             transition: all 0.3s;
         }
+        &.reconstruction-item--page {
+            .reconstruction-item__main {
+                height: 324px;
+            }
+        }
+    }
+    &--page {
+        @include medium {
+            height: 324px;  
+        }
+        .reconstruction-item__content {
+            bottom: 0;
+            top: auto;
+        }
+        .reconstruction__slider img {
+            height: 100%;
+        }
     }
     &__main {
         position: absolute;
@@ -154,5 +171,11 @@
     font-weight: 500;
     font-size: 17px;
     color: #009AD2;    
+    text-decoration: none;
     margin: 0 auto;
+    transition: 0.3s;
+    &:hover {
+        color: #ffffff;
+        background-color: #009AD2
+    }
 }

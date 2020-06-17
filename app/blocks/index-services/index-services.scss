@@ -10,10 +10,12 @@
     width: 33.33333333%;
     position: relative;
     height: 584px;
+    display: block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
+    text-decoration: none;
     &:after {
         content: '';
         position: absolute;
